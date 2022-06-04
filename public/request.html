@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <title>SchoologyWeb</title>
+    </head>
+    <body>
+        <script src="index.js"></script>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <h1 class="title"><a href="index.html" style="text-decoration: none;">SchoologyWeb</a></h1>
+        <div class="data">
+            <form onsubmit="request(this); return false">
+                <h1 style="font-size: 2.5em;">Request</h1>
+                <h2>User ID</h2>
+                <input type="text" id="userID" name="userID" class="loginButton">
+                <br>
+                <h2>Type</h2>
+                <input type="radio" id="type" name="type" value="">
+                <label for="type">Profile</label><br>
+                <input type="radio" id="type" name="type" value="updates">
+                <label for="type">Updates</label>
+                <br><br>
+                <button class="loginButton">Request</button>
+            </form>
+        </div>
+        <div class="footer">
+            <p>SchoologyWeb by tree tree t0rr m0uth | <a href="https://github.com/treetreet0rrm0uth/schoologyweb" target="_blank" style="text-decoration: none; color: #fff;">GitHub</a></p>
+        </div>
+    </body>
+</html>
