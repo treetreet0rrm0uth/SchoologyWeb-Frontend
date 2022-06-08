@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("selfProfile").innerText = "Profile |"
         document.getElementById("selfUpdates").href = `https://schoologyweb.vercel.app/self/${getCookie("key")}/${getCookie("secret")}/updates`
         document.getElementById("selfUpdates").innerText = " Updates"
-    }else {
+        document.getElementById("indexButtonOAuth").remove()
+    } else {
         document.getElementById("signout").remove()
     }
 })
@@ -43,7 +44,10 @@ function loginClick() {
     } else {
         window.location.href = "request.html"
     }
+}
 
+function loginOAuthClick() {
+    window.location.href = "execute.html"
 }
 
 function login(form) {
@@ -59,10 +63,22 @@ function login(form) {
 function request(form) {
     if (document.querySelector('input[name="type"]:checked') && form.userID.value != "") {
         if (document.querySelector('input[name="type"]:checked').value == "updates") {
-            window.location.href = `https://schoologyweb.vercel.app/request/${getCookie("key")}/${getCookie("secret")}/users/${form.userID.value}/${document.querySelector('input[name="type"]:checked').value}&start=0&limit=200`
+            if (document.cookie) {
+                window.location.href = `https://schoologyweb.vercel.app/request/${getCookie("key")}/${getCookie("secret")}/users/${form.userID.value}/${document.querySelector('input[name="type"]:checked').value}&start=0&limit=200`
+            } else {
+                window.location.href = `https://schoologyweb.vercel.app`
+            }
         } else {
             window.location.href = `https://schoologyweb.vercel.app/request/${getCookie("key")}/${getCookie("secret")}/users/${form.userID.value}/${document.querySelector('input[name="type"]:checked').value}`
         }
+    } else {
+        alert("Invalid request!")
+    }
+}
+
+function execute(form) {
+    if (document.querySelector('input[name="type"]:checked') && form.userID.value != "") {
+        window.location.href = `https://schoologyweb.vercel.app/execute/${form.district.value}?request=/users/${form.userID.value}/${document.querySelector('input[name="type"]:checked').value}`
     } else {
         alert("Invalid request!")
     }
