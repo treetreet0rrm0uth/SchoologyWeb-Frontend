@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>SchoologyWeb</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('DOMContentLoaded', async (event) => {
+            setTimeout(function () {
+                document.getElementById("redirect").innerHTML = "Redirecting.."
+            }, 400);
+            setTimeout(function () {
+                document.getElementById("redirect").innerHTML = "Redirecting..."
+                window.location.href = "https://docs.google.com/spreadsheets/d/16xZQPI-gxUziyFyTEzA_IlmAEwdEtnuDtsnqOsX1i9E/edit?usp=sharing"
+            }, 800);
+            setTimeout(function () {
+                document.getElementById("redirect").innerHTML = "Redirect is taking longer than usual..."
+            }, 4000);
+        })
+    </script>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <h1 class="title"><a href="index.html" style="text-decoration: none;">SchoologyWeb</a></h1>
+    <h1 style="position: absolute; left: 50%; top: 25%; -webkit-transform: translate(-50%, -75%); transform: translate(-50%, -75%);"
+        id="redirect">Redirecting.</h1>
+    <div class="footer">
+        <p>SchoologyWeb by tree tree t0rr m0uth | <a href="https://github.com/treetreet0rrm0uth/schoologyweb"
+                target="_blank" style="text-decoration: none; color: #fff;">GitHub</a></p>
+    </div>
+</body>
+
+</html>
