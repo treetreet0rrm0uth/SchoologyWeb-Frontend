@@ -64,9 +64,9 @@ function request(form) {
     if (document.querySelector('input[name="type"]:checked') && form.userID.value != "") {
         if (document.querySelector('input[name="type"]:checked').value == "updates") {
             if (document.cookie) {
-                window.location.href = `https://schoologyweb.vercel.app/request/${getCookie("key")}/${getCookie("secret")}/users/${form.userID.value}/${document.querySelector('input[name="type"]:checked').value}&start=0&limit=200`
+                window.location.href = `https://schoologyweb.vercel.app/request/${getCookie("key")}/${getCookie("secret")}/users/${form.userID.value}/${document.querySelector('input[name="type"]:checked').value}`
             } else {
-                window.location.href = `https://schoologyweb.vercel.app`
+                alert("Login error, please login again!")
             }
         } else {
             window.location.href = `https://schoologyweb.vercel.app/request/${getCookie("key")}/${getCookie("secret")}/users/${form.userID.value}/${document.querySelector('input[name="type"]:checked').value}`
